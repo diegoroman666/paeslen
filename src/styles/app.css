@@ -1,0 +1,42 @@
+/* estilo general */
+body {
+  background: #f5f7fb;
+}
+
+/* cards estilo app */
+.card {
+  border-radius: 18px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* botones estilo app educativa */
+.btn-app {
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+/* botón primario estilo Duolingo */
+.btn-duo {
+  background: #58cc02;
+  border: none;
+  color: white;
+}
+
+.btn-duo:hover {
+  background: #46a302;
+}
+
+/* botón volver */
+.btn-back {
+  border-radius: 10px;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  background: none;
+}

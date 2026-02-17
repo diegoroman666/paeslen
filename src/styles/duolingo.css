@@ -1,0 +1,47 @@
+/* Animación entrada */
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tarjetas estilo Duolingo */
+.card-eje {
+  border-radius: 18px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card-eje:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* Botones estilo Duolingo */
+.btn {
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.15s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Botón volver */
+.volver-btn:hover {
+  transform: translateX(-5px);
+}
+
+/* Navbar más limpio */
+.navbar {
+  border-radius: 0 0 16px 16px;
+}
+
+/* Animación contenido */
+.page-container {
+  animation: fadeIn 0.35s ease;
+}
