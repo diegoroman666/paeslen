@@ -1,9 +1,26 @@
-/* estilo general */
+/* estilo general - Tipografía cómica con fondo de universo */
 body {
-  background: #f5f7fb;
+  font-family: 'Comic Neue', 'Fredoka', cursive, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* cards estilo app */
+/* Overlay para legibilidad */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+}
+
+/* Cards estilo app */
 .card {
   border-radius: 18px;
   transition: 0.2s;
@@ -13,30 +30,251 @@ body {
   transform: translateY(-4px);
 }
 
-/* botones estilo app educativa */
+/* Botones estilo app educativa - Más curvos */
 .btn-app {
-  border-radius: 12px;
-  padding: 12px 18px;
+  border-radius: 24px;
+  padding: 12px 24px;
   font-weight: 600;
+  font-family: 'Fredoka', sans-serif;
 }
 
-/* botón primario estilo Duolingo */
+/* Botón primario estilo Duolingo - ROJO */
 .btn-duo {
-  background: #58cc02;
+  background: #ff6b6b;
   border: none;
   color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .btn-duo:hover {
-  background: #46a302;
+  background: #ee5a5a;
+  transform: scale(1.05);
 }
 
-/* botón volver */
+/* Botón volver */
 .btn-back {
-  border-radius: 10px;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
 }
 
-/* breadcrumb */
+/* Breadcrumb */
 .breadcrumb {
   background: none;
+  font-family: 'Comic Neue', cursive;
 }
+
+/* Títulos más simpáticos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', sans-serif;
+  color: #4a4a4a;
+}
+
+/* Body text más legible */
+p, li, span {
+  font-family: 'Comic Neue', cursive;
+  color: #555;
+}
+
+/* Navbar - Rojo en lugar de azul */
+.navbar {
+  border-radius: 0 0 16px 16px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.bg-primary {
+  background-color: #ff6b6b !important;
+}
+
+.btn-primary {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.btn-primary:hover {
+  background-color: #ee5a5a;
+  border-color: #ee5a5a;
+}
+
+/* Color de acentos en general - Rojo */
+.text-primary {
+  color: #ff6b6b !important;
+}
+
+.border-primary {
+  border-color: #ff6b6b !important;
+}
+
+/* Cards con borde rojo sutil */
+.card {
+  border: 2px solid rgba(255, 107, 107, 0.2);
+}
+
+.card-eje {
+  border: 2px solid rgba(255, 107, 107, 0.3);
+}
+
+/* ==================== BOTONES COLORIDOS Y DINÁMICOS ==================== */
+
+/* Botón rojo (predeterminado) */
+.btn-rojo {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-rojo:hover {
+  background: linear-gradient(135deg, #ee5a5a 0%, #ff7a7a 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+  color: white;
+}
+
+/* Botón azul */
+.btn-azul {
+  background: linear-gradient(135deg, #4dabf7 0%, #74c0fc 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(77, 171, 247, 0.4);
+}
+
+.btn-azul:hover {
+  background: linear-gradient(135deg, #339af0 0%, #5cb3f9 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(77, 171, 247, 0.5);
+  color: white;
+}
+
+/* Botón verde */
+.btn-verde {
+  background: linear-gradient(135deg, #51cf66 0%, #69db7c 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(81, 207, 102, 0.4);
+}
+
+.btn-verde:hover {
+  background: linear-gradient(135deg, #40c057 0%, #5cc96e 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(81, 207, 102, 0.5);
+  color: white;
+}
+
+/* Botón morado */
+.btn-morado {
+  background: linear-gradient(135deg, #9775fa 0%, #b197fc 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(151, 117, 250, 0.4);
+}
+
+.btn-morado:hover {
+  background: linear-gradient(135deg, #845ef7 0%, #a98ffb 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(151, 117, 250, 0.5);
+  color: white;
+}
+
+/* Botón naranja */
+.btn-naranja {
+  background: linear-gradient(135deg, #ff922b 0%, #ffa94d 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 146, 43, 0.4);
+}
+
+.btn-naranja:hover {
+  background: linear-gradient(135deg, #f76707 0%, #ff9f1c 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 146, 43, 0.5);
+  color: white;
+}
+
+/* Botón cyan */
+.btn-cyan {
+  background: linear-gradient(135deg, #22b8cf 0%, #3bc9db 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 184, 207, 0.4);
+}
+
+.btn-cyan:hover {
+  background: linear-gradient(135deg, #15aabf 0%, #2eb8cc 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(34, 184, 207, 0.5);
+  color: white;
+}
+
+/* Botón rosa */
+.btn-rosa {
+  background: linear-gradient(135deg, #f783ac 0%, #f783ac 50%, #da77f2 100%);
+  border: none;
+  color: white;
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 131, 172, 0.4);
+}
+
+.btn-rosa:hover {
+  background: linear-gradient(135deg, #e599f7 0%, #f783ac 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(247, 131, 172, 0.5);
+  color: white;
+}
+
+/* Animación de pulse para botones */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Bordes coloridos para cards */
+.border-rojo { border-left: 4px solid #ff6b6b !important; }
+.border-azul { border-left: 4px solid #4dabf7 !important; }
+.border-verde { border-left: 4px solid #51cf66 !important; }
+.border-morado { border-left: 4px solid #9775fa !important; }
+.border-naranja { border-left: 4px solid #ff922b !important; }
+.border-cyan { border-left: 4px solid #22b8cf !important; }
+

@@ -5,7 +5,7 @@ function BackButton() {
 
   return (
     <button
-      className="btn btn-outline-primary mb-3 volver-btn"
+      className="btn btn-azul mb-3 volver-btn"
       onClick={() => navigate(-1)}
     >
       ← Volver
@@ -14,3 +14,4 @@ function BackButton() {
 }
 
 export default BackButton;
+

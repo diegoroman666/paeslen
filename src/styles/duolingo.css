@@ -10,9 +10,10 @@
 
 /* Tarjetas estilo Duolingo */
 .card-eje {
-  border-radius: 18px;
+  border-radius: 24px;
   transition: 0.2s;
   cursor: pointer;
+  font-family: 'Comic Neue', cursive;
 }
 
 .card-eje:hover {
@@ -20,11 +21,12 @@
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-/* Botones estilo Duolingo */
+/* Botones estilo Duolingo - Más curvos */
 .btn {
-  border-radius: 14px;
+  border-radius: 24px;
   font-weight: 600;
   transition: 0.15s;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .btn:hover {
@@ -32,6 +34,11 @@
 }
 
 /* Botón volver */
+.volver-btn {
+  border-radius: 24px;
+  font-family: 'Fredoka', sans-serif;
+}
+
 .volver-btn:hover {
   transform: translateX(-5px);
 }
@@ -44,4 +51,38 @@
 /* Animación contenido */
 .page-container {
   animation: fadeIn 0.35s ease;
+}
+
+/* Estilos para las secciones de contenido enriquecido */
+.seccion-aprendizaje {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #ff6b6b;
+}
+
+.seccion-habilidades {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #4ecdc4;
+}
+
+.seccion-porque {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-left: 4px solid #ffe66d;
+}
+
+.titulo-seccion {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

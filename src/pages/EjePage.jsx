@@ -14,21 +14,31 @@ function EjePage() {
         <div className="container mt-4">
             <h2 className="text-center mb-4">{eje.nombre}</h2>
 
-            <div className="list-group">
+            <div className="row g-3">
                 {eje.unidades.map(unidad => (
-                    <button
-                        key={unidad.id}
-                        className="list-group-item list-group-item-action"
-                        onClick={() => navigate(`/eje/${id}/unidad/${unidad.id}`)}
-                    >
-                        {unidad.nombre}
-                    </button>
+                    <div key={unidad.id} className="col-12">
+                        <div 
+                            className="card h-100 shadow-sm card-eje"
+                            style={{cursor: 'pointer'}}
+                            onClick={() => navigate(`/eje/${id}/unidad/${unidad.id}`)}
+                        >
+                            <div className="card-body d-flex flex-column justify-content-between">
+                                <h5 className="card-title text-center">{unidad.nombre}</h5>
+                                <p className="card-text text-muted small text-center">
+                                    {unidad.temas ? `${unidad.temas.length} temas` : 'Ver contenido'}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 ))}
             </div>
-            <BackButton />
-      
+            
+            <div className="mt-4 text-center">
+                <BackButton />
+            </div>
         </div>
     )
 }
 
 export default EjePage
+

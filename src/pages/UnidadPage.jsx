@@ -15,24 +15,33 @@ function UnidadPage() {
     <div className="container mt-4">
       <h3 className="mb-4 text-center">{unidad.nombre}</h3>
 
-      <div className="list-group">
+      <div className="row g-3">
         {unidad.temas.map(tema => (
-          <button
-            key={tema.id}
-            className="list-group-item list-group-item-action"
-            onClick={() =>
-              navigate(`/eje/${ejeId}/unidad/${unidadId}/tema/${tema.id}`)
-            }
-          >
-            {tema.nombre}
-          </button>
+          <div key={tema.id} className="col-12">
+            <div 
+              className="card h-100 shadow-sm card-eje"
+              style={{cursor: 'pointer'}}
+              onClick={() =>
+                navigate(`/eje/${ejeId}/unidad/${unidadId}/tema/${tema.id}`)
+              }
+            >
+              <div className="card-body d-flex flex-column justify-content-between">
+                <h5 className="card-title text-center">{tema.nombre}</h5>
+                <p className="card-text text-muted small text-center">
+                  {tema.objetivosAprendizaje ? `${tema.objetivosAprendizaje.length} objetivos de aprendizaje` : 'Ver contenido'}
+                </p>
+              </div>
+            </div>
+          </div>
         ))}
-        
       </div>
-           <BackButton /> 
-
+      
+      <div className="mt-4 text-center">
+        <BackButton />
+      </div>
     </div>
   )
 }
 
 export default UnidadPage
+
