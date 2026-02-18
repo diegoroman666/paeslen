@@ -1,3 +1,4 @@
+
 const contenidosPAES = [
   {
     id: "comprension-lectora",
@@ -11,19 +12,6 @@ const contenidosPAES = [
           {
             id: "narrativo",
             nombre: "Texto Narrativo",
-            porqueSeEnseña: "Los textos narrativos son fundamentales en la comprensión lectora porque permiten al estudiante identificar estructuras story-telling que aparecen frecuentemente en evaluaciones y en la vida cotidiana. Dominar la narrativa ayuda a comprender artículos, novelas, noticias y cualquier texto que presente una secuencia de eventos.",
-            objetivosAprendizaje: [
-              "Identificar los elementos del relato: narrador, personajes, tiempo, espacio y conflicto",
-              "Diferenciar entre tipos de narrador: protagonista, omnisciente y testigo",
-              "Analizar la estructura narrativa: inicio, desarrollo y desenlace",
-              "Interpretar el propósito del autor en textos narrativos"
-            ],
-            habilidades: [
-              "Pensamiento crítico al analizar motivaciones de personajes",
-              "Capacidad de seguimiento secuencial de eventos",
-              "Empatía al relacionarse con experiencias de otros",
-              "Memoria y retención de detalles importantes"
-            ],
             subunidades: [
               {
                 nombre: "Elementos del relato",
@@ -34,11 +22,23 @@ const contenidosPAES = [
                   "espacio",
                   "conflicto"
                 ],
+                porqueSeEnseña: "El texto narrativo es fundamental en la comprensión lectora porque permite al estudiante identificar las voces narrativas, distinguir la perspectiva del autor y comprender cómo se construyen las historias. Esto es esencial para el análisis de obras literarias y textos informativos.",
+                objetivosAprendizaje: [
+                  "Identificar los diferentes tipos de narrador (protagonista, testigo, omnisciente)",
+                  "Comprender la diferencia entre primera y tercera persona",
+                  "Analizar cómo la voz narrativa afecta la historia"
+                ],
+                habilidades: [
+                  "Pensamiento crítico",
+                  "Análisis de perspectivas",
+                  "Interpretación de intenciones del autor"
+                ],
                 ejemplo: {
-                  texto: "Juan caminaba solo bajo la lluvia pensando en su pasado.",
-                  pregunta: "¿Qué tipo de narrador aparece?",
-                  opciones: ["protagonista", "omnisciente", "testigo"],
-                  correcta: 0
+                  texto: "Caminé por la calle desierta recordando lo aquella noche.",
+                  pregunta: "¿Quién narra la historia?",
+                  opciones: ["Narrador omnisciente", "Narrador protagonista", "Narrador testigo", "Narrador objetivo"],
+                  correcta: 1,
+                  explicacion: "Usa primera persona ('caminé'), el narrador participa en los hechos como protagonista de la historia."
                 }
               }
             ]
@@ -46,19 +46,6 @@ const contenidosPAES = [
           {
             id: "expositivo",
             nombre: "Texto Expositivo",
-            porqueSeEnseña: "El texto expositivo es el formato más común en contextos académicos y profesionales. La capacidad de comprender este tipo de textos es esencial para el éxito en la educación superior y en el mundo laboral, donde se requiere procesar información técnica y científica.",
-            objetivosAprendizaje: [
-              "Identificar la idea principal y los detalles que la sustentan",
-              "Diferenciar información explícita de información implícita",
-              "Realizar inferencias basadas en el texto",
-              "Comprender estructuras textuales como causa-efecto y problema-solución"
-            ],
-            habilidades: [
-              "Síntesis de información compleja",
-              "Pensamiento analítico",
-              "Capacidad de resumir ideas principales",
-              "Razonamiento lógico"
-            ],
             subunidades: [
               {
                 nombre: "Información explícita e implícita",
@@ -67,15 +54,23 @@ const contenidosPAES = [
                   "detalles",
                   "inferencias"
                 ],
+                porqueSeEnseña: "Los textos expositivos son la base del aprendizaje académico. Identificar ideas principales permite a los estudiantes organizar información y construir conocimiento de manera estructurada.",
+                objetivosAprendizaje: [
+                  "Identificar la idea principal de un párrafo",
+                  "Diferenciar información explícita de la implícita",
+                  "Realizar inferencias lógicas"
+                ],
+                habilidades: [
+                  "Comprensión de información",
+                  "Organización de ideas",
+                  "Razonamiento lógico"
+                ],
                 ejemplo: {
-                  texto: "El cambio climático es el aumento de la temperatura global causado por emisiones contaminantes.",
-                  pregunta: "¿Cuál es la idea principal del texto?",
-                  opciones: [
-                    "El clima cambia naturalmente",
-                    "El aumento de temperatura global",
-                    "Las estaciones del año"
-                  ],
-                  correcta: 1
+                  texto: "El cambio climático ha provocado un aumento en las temperaturas globales, afectando ecosistemas y especies.",
+                  pregunta: "¿Cuál es la idea principal?",
+                  opciones: ["Los ecosistemas son importantes", "El cambio climático afecta el planeta", "Existen especies en peligro", "La temperatura cambia diariamente"],
+                  correcta: 1,
+                  explicacion: "La oración central explica el efecto general del cambio climático sobre el planeta."
                 }
               }
             ]
@@ -83,19 +78,6 @@ const contenidosPAES = [
           {
             id: "argumentativo",
             nombre: "Texto Argumentativo",
-            porqueSeEnseña: "En una era de información abundante, la capacidad de evaluar argumentos es crucial. Este contenido desarrolla habilidades para identificar falacias, evaluar evidencia y formar opiniones fundamentadas, competencias esenciales para la participación ciudadana informada.",
-            objetivosAprendizaje: [
-              "Identificar la tesis principal de un argumento",
-              "Reconocer los argumentos y la evidencia que los sustenta",
-              "Analizar la estructura argumentativa: tesis, argumentos, evidencia, conclusión",
-              "Evaluar la validez y solidez de los argumentos presentados"
-            ],
-            habilidades: [
-              "Pensamiento crítico y analítico",
-              "Evaluación de evidencia",
-              "Formulación de opiniones fundamentadas",
-              "Comunicación persuasiva"
-            ],
             subunidades: [
               {
                 nombre: "Estructura argumentativa",
@@ -105,11 +87,23 @@ const contenidosPAES = [
                   "evidencia",
                   "conclusión"
                 ],
+                porqueSeEnseña: "La argumentación es esencial para el pensamiento crítico. Los estudiantes deben aprender a construir y evaluar argumentos para participar activamente en debates académicos y ciudadanos.",
+                objetivosAprendizaje: [
+                  "Identificar la tesis en un texto argumentativo",
+                  "Reconocer los argumentos de apoyo",
+                  "Evaluar la validez de las evidencias"
+                ],
+                habilidades: [
+                  "Pensamiento crítico",
+                  "Evaluación de argumentos",
+                  "Comunicación persuasiva"
+                ],
                 ejemplo: {
-                  texto: "La educación gratuita es fundamental porque permite igualdad de oportunidades.",
-                  pregunta: "¿Qué elemento representa la postura principal?",
-                  opciones: ["tesis", "detalle", "ejemplo"],
-                  correcta: 0
+                  texto: "El uso del transporte público debería aumentar porque reduce la contaminación.",
+                  pregunta: "¿Qué elemento corresponde a la tesis?",
+                  opciones: ["reduce la contaminación", "transporte público", "debería aumentar el uso del transporte público", "contaminación ambiental"],
+                  correcta: 2,
+                  explicacion: "La tesis es la postura o posición que se defendedebe aumentar el uso del transporte público."
                 }
               }
             ]
@@ -123,19 +117,6 @@ const contenidosPAES = [
           {
             id: "localizar-informacion",
             nombre: "Localizar Información",
-            porqueSeEnseña: "La capacidad de encontrar información específica rápidamente es una habilidad fundamental en el mundo digital actual. Las pruebas PAES evaluan específicamente esta competencia para asegurar que los estudiantes puedan extraer datos precisos de textos extensos.",
-            objetivosAprendizaje: [
-              "Localizar datos específicos en textos extensos",
-              "Identificar información directa y explícita",
-              "Utilizar señales textuales para encontrar información",
-              "Distinguir entre información relevante e irrelevante"
-            ],
-            habilidades: [
-              "Escaneo eficiente de textos",
-              "Atención al detalle",
-              "Organización de información",
-              "Velocidad de lectura"
-            ],
             subunidades: [
               {
                 nombre: "Información explícita",
@@ -143,11 +124,23 @@ const contenidosPAES = [
                   "datos directos",
                   "detalles específicos"
                 ],
+                porqueSeEnseña: "La habilidad de localizar información explícita es la base de la comprensión lectora. Permite al estudiante encontrar respuestas directas en el texto sin necesidad de inferir.",
+                objetivosAprendizaje: [
+                  "Encontrar datos específicos en un texto",
+                  "Identificar detalles relevantes",
+                  "Localizar información numérica y fechas"
+                ],
+                habilidades: [
+                  "Búsqueda de información",
+                  "Atención al detalle",
+                  "Lectura eficiente"
+                ],
                 ejemplo: {
-                  texto: "El tratado fue firmado en 1998.",
-                  pregunta: "¿En qué año se firmó el tratado?",
-                  opciones: ["1998", "2000", "1988"],
-                  correcta: 0
+                  texto: "El museo abre sus puertas a las 9:00 de la mañana.",
+                  pregunta: "¿A qué hora abre el museo?",
+                  opciones: ["8:00", "9:00", "10:00", "No se indica"],
+                  correcta: 1,
+                  explicacion: "Información explícita: aparece textual en el texto - 'a las 9:00 de la mañana'."
                 }
               }
             ]
@@ -155,52 +148,62 @@ const contenidosPAES = [
           {
             id: "interpretar",
             nombre: "Interpretar",
-            porqueSeEnseña: "Interpretar va más allá de leer palabras: significa comprender el significado más profundo del texto. Esta habilidad es necesaria para la comunicación efectiva y para comprender смыслы implícitos en todas las formas de comunicación humana.",
-            objetivosAprendizaje: [
-              "Identificar significado contextual de palabras y expresiones",
-              "Reconocer la intención del autor",
-              "Realizar inferencias lógicas",
-              "Interpretar figuras retóricas en contexto"
-            ],
-            habilidades: [
-              "Comprensión lectora profunda",
-              "Pensamiento inferencial",
-              "Análisis de contexto",
-              "Empatía lectora"
-            ],
             subunidades: [
               {
                 nombre: "Inferencias",
                 contenidos: [
                   "significado contextual",
                   "intención del autor"
-                ]
+                ],
+                porqueSeEnseña: "La inferencia es una habilidad cognitiva superior que permite comprender información no explícita. Es esencial para la comprensión profunda de textos.",
+                objetivosAprendizaje: [
+                  "Realizar inferencias lógicas",
+                  "Comprender el significado contextual",
+                  "Identificar la intención del autor"
+                ],
+                habilidades: [
+                  "Razonamiento deductivo",
+                  "Pensamiento crítico",
+                  "Comprensión profunda"
+                ],
+                ejemplo: {
+                  texto: "Pedro salió con paraguas y abrigo grueso.",
+                  pregunta: "¿Qué se puede inferir?",
+                  opciones: ["Hace calor", "Está lloviendo o hace frío", "Es verano", "Pedro está enfermo"],
+                  correcta: 1,
+                  explicacion: "Inferencia: el paraguas y el abrigo sugieren lluvia o frío, información no explícita que se deduce del contexto."
+                }
               }
             ]
           },
           {
             id: "evaluar",
             nombre: "Evaluar",
-            porqueSeEnseña: "Evaluar textos requiere un nivel superior de comprensión que implica juicio crítico. Esta competencia prepara a los estudiantes para ser consumidores críticos de información, capaces de distinguir fuentes confiables de información cuestionable.",
-            objetivosAprendizaje: [
-              "Identificar la postura o punto de vista del autor",
-              "Evaluar la confiabilidad de una fuente",
-              "Reconocer sesgos y manipulaciones en el texto",
-              "Formular juicios críticos fundamentados"
-            ],
-            habilidades: [
-              "Pensamiento crítico",
-              "Evaluación de fuentes",
-              "Detección de sesgos",
-              "Juicio fundamentado"
-            ],
             subunidades: [
               {
                 nombre: "Juicio crítico",
                 contenidos: [
                   "postura del autor",
                   "confiabilidad"
-                ]
+                ],
+                porqueSeEnseña: "Evaluar textos críticamente es fundamental en la era de la información. Los estudiantes deben distinguir entre hechos y opiniones para evitar desinformación.",
+                objetivosAprendizaje: [
+                  "Identificar opiniones vs. hechos",
+                  "Evaluar la confiabilidad de fuentes",
+                  "Reconocer sesgos en textos"
+                ],
+                habilidades: [
+                  "Pensamiento crítico",
+                  "Evaluación de fuentes",
+                  "Alfabetización cívica"
+                ],
+                ejemplo: {
+                  texto: "Este producto es el mejor del mercado, según nuestra empresa.",
+                  pregunta: "¿Qué caracteriza esta afirmación?",
+                  opciones: ["Objetividad científica", "Información verificable", "Opinión interesada", "Dato estadístico"],
+                  correcta: 2,
+                  explicacion: "Proviene de la misma empresa que vende el producto, por lo tanto es una opinión interesada y sesgada."
+                }
               }
             ]
           }
@@ -213,19 +216,6 @@ const contenidosPAES = [
           {
             id: "significado-contextual",
             nombre: "Significado contextual",
-            porqueSeEnseña: "El vocabulario no existe aislado; las palabras cambian de significado según el contexto. Esta habilidad es esencial para la comprensión lectora avanzada y para evitar malentendidos en la comunicación.",
-            objetivosAprendizaje: [
-              "Identificar sinonimia contextual",
-              "Comprender el sentido figurado de expresiones",
-              "Diferenciar significado denotativo de connotativo",
-              "Ampliar vocabulario activo y pasivo"
-            ],
-            habilidades: [
-              "Flexibilidad semántica",
-              "Interpretación contextual",
-              "Ampliación de vocabulario",
-              "Expresión precisa"
-            ],
             subunidades: [
               {
                 nombre: "Sinonimia contextual",
@@ -233,11 +223,23 @@ const contenidosPAES = [
                   "reemplazo de palabras",
                   "sentido figurado"
                 ],
+                porqueSeEnseña: "Las palabras pueden tener diferentes significados según el contexto. Comprender el sentido figurado permite una lectura más rica y profunda de los textos literarios.",
+                objetivosAprendizaje: [
+                  "Identificar sinónimos en contexto",
+                  "Comprender sentido figurado vs. literal",
+                  "Ampliar vocabulario activo"
+                ],
+                habilidades: [
+                  "Comprensión contextual",
+                  "Interpretación literaria",
+                  "Expansión léxica"
+                ],
                 ejemplo: {
                   texto: "El panorama era oscuro.",
-                  pregunta: "¿Qué significa 'oscuro' en este contexto?",
-                  opciones: ["sombrío", "sin luz", "negro"],
-                  correcta: 0
+                  pregunta: "¿Qué palabra reemplaza 'oscuro' en el contexto de incertidumbre?",
+                  opciones: ["negro", "sombrío", "sucio", "apagado"],
+                  correcta: 1,
+                  explicacion: "No se refiere al color, sino al sentido figurado: situación sombría o incierta."
                 }
               }
             ]
@@ -259,19 +261,6 @@ const contenidosPAES = [
           {
             id: "relaciones-semanticas",
             nombre: "Relaciones semánticas",
-            porqueSeEnseña: "Comprender las relaciones entre palabras enriquece el vocabulario y mejora la comprensión textual. Las relaciones semánticas son la base para entender juegos de palabras, sarcasmo, ironía y expresiones idiomáticas frecuentes en español.",
-            objetivosAprendizaje: [
-              "Identificar sinónimos y aplicarlos correctamente",
-              "Reconocer antónimos y su uso enfático",
-              "Comprender la polisemia y sus implicaciones",
-              "Utilizar relaciones semánticas para ampliar vocabulario"
-            ],
-            habilidades: [
-              "Ampliación de vocabulario",
-              "Expresión precisa",
-              "Comprensión de expresiones idiomáticas",
-              "Riqueza léxica"
-            ],
             subunidades: [
               {
                 nombre: "Tipos",
@@ -279,7 +268,24 @@ const contenidosPAES = [
                   "sinonimia",
                   "antonimia",
                   "polisemia"
-                ]
+                ],
+                porqueSeEnseña: "Las relaciones semánticas son esenciales para la comprensión de textos y la expansión del vocabulario. Permiten entender mejor las palabras y sus relaciones.",
+                objetivosAprendizaje: [
+                  "Identificar sinónimos y antónimos",
+                  "Comprender la polisemia",
+                  "Usar vocabulario variado en producción"
+                ],
+                habilidades: [
+                  "Ampliación de vocabulario",
+                  "Comprensión lectora",
+                  "Expresión escrita"
+                ],
+                ejemplo: {
+                  texto: "¿Cuál es sinónimo de 'rápido'?",
+                  opciones: ["veloz", "lento", "débil", "firme"],
+                  correcta: 0,
+                  explicacion: "Sinónimo: palabras con significado equivalente o muy similar."
+                }
               }
             ]
           }
@@ -292,19 +298,6 @@ const contenidosPAES = [
           {
             id: "cohesion-textual",
             nombre: "Cohesión textual",
-            porqueSeEnseña: "Los conectores son el 'pegamento' que mantiene unido un texto. Dominarlos permite no solo comprender mejor textos ajenos, sino también producir escritos más claros y coherentes, habilidad fundamental en cualquier contexto académico o profesional.",
-            objetivosAprendizaje: [
-              "Identificar conectores de causa y efecto",
-              "Reconocer conectores de oposición y contraste",
-              "Utilizar conectores de adición y secuencia",
-              "Aplicar conectores para mejorar la cohesión textual"
-            ],
-            habilidades: [
-              "Producción de textos coherentes",
-              "Organización lógica de ideas",
-              "Expresión escrita clara",
-              "Pensamiento estructurado"
-            ],
             subunidades: [
               {
                 nombre: "Tipos de conectores",
@@ -314,11 +307,22 @@ const contenidosPAES = [
                   "oposición",
                   "adición"
                 ],
+                porqueSeEnseña: "Los conectores son esenciales para la coherencia textual. Permiten linking ideas y crear textos con fluidez lógica.",
+                objetivosAprendizaje: [
+                  "Identificar diferentes tipos de conectores",
+                  "Usar conectores apropiadamente",
+                  "Mejorar la cohesión de textos propios"
+                ],
+                habilidades: [
+                  "Producción textual",
+                  "Coherencia argumentativa",
+                  "Organización de ideas"
+                ],
                 ejemplo: {
-                  texto: "Quería salir, sin embargo, estaba lloviendo.",
-                  pregunta: "¿Qué indica 'sin embargo'?",
-                  opciones: ["causa", "oposición", "adición"],
-                  correcta: 1
+                  texto: "Selecciona el conector de oposición:",
+                  opciones: ["además", "porque", "sin embargo", "entonces"],
+                  correcta: 2,
+                  explicacion: "'Sin embargo' expresa oposición o contraste entre dos ideas."
                 }
               }
             ]
@@ -332,19 +336,6 @@ const contenidosPAES = [
           {
             id: "uso-idioma",
             nombre: "Uso correcto del idioma",
-            porqueSeEnseña: "La normativa lingüística es esencial para la comunicación efectiva y profesional. Un dominio correcto del idioma proyecta credibilidad y asegura que el mensaje sea recibido tal como se intended, evitando ambigüedades y malentendidos.",
-            objetivosAprendizaje: [
-              "Aplicar reglas de puntuación correctamente",
-              "Mantener concordancia gramatical entre sujeto y verbo",
-              "Emplear ortografía funcional en escritura",
-              "Identificar y corregir errores常见es"
-            ],
-            habilidades: [
-              "Escritura correcta y precisa",
-              "Atención al detalle",
-              "Autocorrección",
-              "Comunicación profesional efectiva"
-            ],
             subunidades: [
               {
                 nombre: "Reglas",
@@ -352,7 +343,24 @@ const contenidosPAES = [
                   "puntuación",
                   "concordancia",
                   "ortografía funcional"
-                ]
+                ],
+                porqueSeEnseña: "El uso correcto del idioma es fundamental para la comunicación efectiva. La normativa asegura que los textos sean claros y comprensibles.",
+                objetivosAprendizaje: [
+                  "Aplicar reglas de concordancia",
+                  "Usar correctamente los signos de puntuación",
+                  "Ortografía funcional para la comunicación"
+                ],
+                habilidades: [
+                  "Comunicación escrita",
+                  "Atención al detalle",
+                  "Corrección lingüística"
+                ],
+                ejemplo: {
+                  texto: "¿Qué oración está correcta en concordancia?",
+                  opciones: ["La personas estudia.", "Las personas estudian.", "La personas studian.", "Las persona estudia."],
+                  correcta: 1,
+                  explicacion: "Sujeto plural 'las personas' requiere verbo plural 'estudian'."
+                }
               }
             ]
           }
@@ -372,26 +380,30 @@ const contenidosPAES = [
           {
             id: "coherencia",
             nombre: "Coherencia",
-            porqueSeEnseña: "Un texto coherente es aquel donde las ideas se relacionan lógicamente y forman un conjunto comprensible. La coherencia es lo que diferencia un texto efectivo de uno confuso, y es una habilidad evaluada en todas las pruebas de lenguaje.",
-            objetivosAprendizaje: [
-              "Identificar el tema central y las ideas secundarias",
-              "Reconocer la progresión temática en un texto",
-              "Establecer relaciones lógicas entre párrafos",
-              "Evaluar la coherencia global de un texto"
-            ],
-            habilidades: [
-              "Organización de ideas",
-              "Pensamiento lógico",
-              "Estructuración de argumentos",
-              "Comprensión global de textos"
-            ],
             subunidades: [
               {
                 nombre: "Estructura",
                 contenidos: [
                   "orden lógico",
                   "progresión temática"
-                ]
+                ],
+                porqueSeEnseña: "La coherencia es lo que hace que un texto tenga sentido. Un texto coherente permite al lector seguir el hilo de las ideas fácilmente.",
+                objetivosAprendizaje: [
+                  "Organizar ideas en orden lógico",
+                  "Mantener progresión temática",
+                  "Crear textos cohesivos y coherentes"
+                ],
+                habilidades: [
+                  "Organización de ideas",
+                  "Producción textual",
+                  "Pensamiento lógico"
+                ],
+                ejemplo: {
+                  texto: "¿Cuál secuencia tiene orden lógico de acciones?",
+                  opciones: ["Dormí — Me acosté — Apagué la luz", "Me acosté — Apagué la luz — Dormí", "Apagué la luz — Desperté — Me acosté", "Dormí — Desperté — Me acosté"],
+                  correcta: 1,
+                  explicacion: "Orden lógico: primero me acuesto, luego apago la luz, finalmente duermo."
+                }
               }
             ]
           }
@@ -404,19 +416,6 @@ const contenidosPAES = [
           {
             id: "intencion-emisor",
             nombre: "Intención del emisor",
-            porqueSeEnseña: "Todo texto tiene un propósito: informar, persuadir, entretener, etc. Comprender la intención del emisor permite una lectura más profunda y crítica, siendo fundamental para responder adecuadamente a diferentes situaciones comunicativas.",
-            objetivosAprendizaje: [
-              "Identificar el propósito comunicativo de un texto",
-              "Diferenciar entre informar, persuadir y expresar",
-              "Reconocer estrategias discursivas según el propósito",
-              "Adaptar la lectura al propósito del texto"
-            ],
-            habilidades: [
-              "Lectura crítica",
-              "Análisis de intención comunicativa",
-              "Flexibilidad lectora",
-              "Comprensión de estrategias persuasivas"
-            ],
             subunidades: [
               {
                 nombre: "Tipos",
@@ -424,7 +423,25 @@ const contenidosPAES = [
                   "informar",
                   "persuadir",
                   "expresar"
-                ]
+                ],
+                porqueSeEnseña: "Identificar el propósito comunicativo permite comprender la intención del autor y responder apropiadamente al texto.",
+                objetivosAprendizaje: [
+                  "Diferenciar propósitos comunicativos",
+                  "Identificar intención del emisor",
+                  "Adaptar la lectura al propósito"
+                ],
+                habilidades: [
+                  "Comprensión pragmática",
+                  "Análisis textual",
+                  "Comunicación efectiva"
+                ],
+                ejemplo: {
+                  texto: "'Compra este producto ahora.'",
+                  pregunta: "El propósito es:",
+                  opciones: ["informar", "persuadir", "describir", "narrar"],
+                  correcta: 1,
+                  explicacion: "El objetivo es influir en el receptor para que compre, es un propósito persuasivo."
+                }
               }
             ]
           }
@@ -442,21 +459,8 @@ const contenidosPAES = [
         nombre: "Géneros literarios",
         temas: [
           {
-            id: "narrativo-lit",
+            id: "narrativo",
             nombre: "Narrativo",
-            porqueSeEnseña: "El género narrativo es el más antiguo y universal de todos. Comprender sus formas (cuento, novela) permite disfrutar de la literatura y desarrollar la imaginación, además de identificar estructuras narrativas presentes en medios contemporáneos como el cine y series.",
-            objetivosAprendizaje: [
-              "Diferenciar entre cuento y novela",
-              "Identificar elementos narrativos en obras literarias",
-              "Analizar la estructura temporal de un relato",
-              "Comprender la evolución de personajes"
-            ],
-            habilidades: [
-              "Imaginación y creatividad",
-              "Análisis de personajes",
-              "Comprensión de estructuras narrativas",
-              "Apreciación literaria"
-            ],
             subunidades: [
               {
                 nombre: "Formas",
@@ -467,45 +471,36 @@ const contenidosPAES = [
           {
             id: "lirico",
             nombre: "Lírico",
-            porqueSeEnseña: "La poesía desarrolla la sensibilidad lingüística y permite expresar emociones de manerabeautiful. El género lírico entrena la atención al lenguaje figurado y a las emociones, competencias fundamentales para una comprensión lectora profunda.",
-            objetivosAprendizaje: [
-              "Identificar el hablante lírico en un poema",
-              "Reconocer figuras literarias: metáfora, comparación, personificación",
-              "Analizar el uso del ritmo y la sonoridad",
-              "Interpretar el significado emocional de un poema"
-            ],
-            habilidades: [
-              "Expresión emocional",
-              "Análisis de lenguaje figurado",
-              "Sensibilidad estética",
-              "Interpretación simbólica"
-            ],
             subunidades: [
               {
                 nombre: "Elementos",
                 contenidos: [
                   "hablante lírico",
                   "figuras literarias"
-                ]
+                ],
+                porqueSeEnseña: "El género lírico expresa emociones y sentimientos a través de la poesía. Comprender el hablante lírico permite una lectura más profunda de la poesía.",
+                objetivosAprendizaje: [
+                  "Diferenciar autor de hablante lírico",
+                  "Identificar emociones en poesía",
+                  "Analizar recursos expresivos"
+                ],
+                habilidades: [
+                  "Interpretación emocional",
+                  "Análisis poético",
+                  "Apreciación literaria"
+                ],
+                ejemplo: {
+                  texto: "¿Quién expresa emociones en el poema?",
+                  opciones: ["narrador", "hablante lírico", "autor real", "lector"],
+                  correcta: 1,
+                  explicacion: "El hablante lírico es la voz que presenta el poema, no necesariamente el autor real."
+                }
               }
             ]
           },
           {
             id: "dramatico",
             nombre: "Dramático",
-            porqueSeEnseña: "El teatro integra palabra, acción y emoción. Estudiar el género dramático desarrolla la comprensión de diálogos, conflictos y caracterización, habilidades transferibles a la comprensión de interacciones humanas en cualquier contexto.",
-            objetivosAprendizaje: [
-              "Identificar elementos del texto dramático: diálogo, acotaciones",
-              "Analizar conflictos en obras teatrales",
-              "Comprender la caracterización de personajes",
-              "Diferenciar tragedia de comedia"
-            ],
-            habilidades: [
-              "Análisis de diálogo",
-              "Comprensión de conflicto",
-              "Interpretación de personajes",
-              "Pensamiento crítico sobre motivaciones"
-            ],
             subunidades: [
               {
                 nombre: "Elementos",
@@ -525,19 +520,6 @@ const contenidosPAES = [
           {
             id: "figuras",
             nombre: "Figuras literarias",
-            porqueSeEnseña: "Las figuras literarias son herramientas que usan los autores para crear эффекты específicos. Conocerlas permite una lectura más profunda y apreciativa, además de mejorar las propias habilidades de expresión escrita y oral.",
-            objetivosAprendizaje: [
-              "Identificar metáforas y comparaciones",
-              "Reconocer hipérbole y sus efectos",
-              "Comprender la personificación",
-              "Aplicar figuras literarias en escritura propia"
-            ],
-            habilidades: [
-              "Expresión creativa",
-              "Análisis estilístico",
-              "Escritura descriptiva",
-              "Apreciación del lenguaje artístico"
-            ],
             subunidades: [
               {
                 nombre: "Tipos",
@@ -546,7 +528,32 @@ const contenidosPAES = [
                   "hipérbole",
                   "comparación",
                   "personificación"
-                ]
+                ],
+                porqueSeEnseña: "Las figuras literarias enriquecen el lenguaje y crean efectos específicos. Son fundamentales para el análisis de textos literarios.",
+                objetivosAprendizaje: [
+                  "Identificar metáforas, comparaciones, personificaciones",
+                  "Comprender el efecto de las figuras retóricas",
+                  "Usar figuras en producción propia"
+                ],
+                habilidades: [
+                  "Análisis literario",
+                  "Interpretación simbólica",
+                  "Expresión creativa"
+                ],
+                ejemplo: {
+                  texto: "'Sus ojos eran dos estrellas.'",
+                  pregunta: "¿Qué figura aparece?",
+                  opciones: ["hipérbole", "metáfora", "ironía", "personificación"],
+                  correcta: 1,
+                  explicacion: "Metáfora: comparación implícita sin usar 'como'. Los ojos se transforman directamente en estrellas."
+                },
+                ejemplo2: {
+                  texto: "'El viento susurraba.'",
+                  pregunta: "¿Qué figura aparece?",
+                  opciones: ["metáfora", "comparación", "personificación", "ironía"],
+                  correcta: 2,
+                  explicacion: "Personificación: se atribuyen características humanas (susurrar) a un elemento de la naturaleza (viento)."
+                }
               }
             ]
           }

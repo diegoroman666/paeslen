@@ -1,4 +1,6 @@
+
 import BackButton from "../components/BackButton";
+import EjercicioInteractivo from "../components/EjercicioInteractivo";
 import { useParams } from "react-router-dom"
 import contenidosPAES from "../data/contenidos"
 
@@ -12,6 +14,16 @@ const coloresSubunidades = [
     'border-cyan'
 ]
 
+// Colores para los títulos
+const coloresTitulos = [
+    'subtitulo-rojo',
+    'subtitulo-azul',
+    'subtitulo-verde',
+    'subtitulo-morado',
+    'subtitulo-naranja',
+    'subtitulo-cyan'
+]
+
 function TemaPage() {
   const { ejeId, unidadId, temaId } = useParams()
 
@@ -21,24 +33,29 @@ function TemaPage() {
 
   if (!tema) return <div className="container mt-4">Tema no encontrado</div>
 
-  return (
-    <div className="container mt-4">
-      <h3 className="text-center mb-4">📖 {tema.nombre}</h3>
+  // Obtener el primer subtema que tenga información de enriquecimiento
+  const primerSubenriquecido = tema.subunidades?.find(sub => 
+    sub.porqueSeEnseña || (sub.objetivosAprendizaje?.length > 0) || (sub.habilidades?.length > 0)
+  )
 
-      {/* ¿Por qué se enseña? */}
-      {tema.porqueSeEnseña && (
-        <div className="seccion-porque mb-4">
+  return (
+    <div className="container mt-4 pb-5">
+      <h3 className="text-center mb-4 fw-bold">📖 {tema.nombre}</h3>
+
+      {/* ¿Por qué se enseña? - Información general del tema */}
+      {(tema.porqueSeEnseña || primerSubenriquecido?.porqueSeEnseña) && (
+        <div className="seccion-porque mb-4 fade-in">
           <h5 className="titulo-seccion">📚 ¿Por qué se enseña este contenido?</h5>
-          <p>{tema.porqueSeEnseña}</p>
+          <p className="mb-0">{tema.porqueSeEnseña || primerSubenriquecido?.porqueSeEnseña}</p>
         </div>
       )}
 
       {/* Objetivos de aprendizaje */}
-      {tema.objetivosAprendizaje && tema.objetivosAprendizaje.length > 0 && (
-        <div className="seccion-aprendizaje mb-4">
+      {(tema.objetivosAprendizaje?.length > 0 || primerSubenriquecido?.objetivosAprendizaje?.length > 0) && (
+        <div className="seccion-aprendizaje mb-4 fade-in">
           <h5 className="titulo-seccion">🎯 ¿Qué aprenderás?</h5>
-          <ul>
-            {tema.objetivosAprendizaje.map((obj, i) => (
+          <ul className="mb-0">
+            {(tema.objetivosAprendizaje || primerSubenriquecido?.objetivosAprendizaje || []).map((obj, i) => (
               <li key={i}>{obj}</li>
             ))}
           </ul>
@@ -46,11 +63,11 @@ function TemaPage() {
       )}
 
       {/* Habilidades que mejorarás */}
-      {tema.habilidades && tema.habilidades.length > 0 && (
-        <div className="seccion-habilidades mb-4">
+      {(tema.habilidades?.length > 0 || primerSubenriquecido?.habilidades?.length > 0) && (
+        <div className="seccion-habilidades mb-4 fade-in">
           <h5 className="titulo-seccion">💪 Habilidades que mejorarás</h5>
-          <ul>
-            {tema.habilidades.map((hab, i) => (
+          <ul className="mb-0">
+            {(tema.habilidades || primerSubenriquecido?.habilidades || []).map((hab, i) => (
               <li key={i}>{hab}</li>
             ))}
           </ul>
@@ -58,39 +75,63 @@ function TemaPage() {
       )}
 
       {/* Contenido del tema - Grid hacia abajo */}
-      <div className="row g-3">
+      <div className="row g-4">
         {tema.subunidades.map((sub, index) => (
           <div key={index} className="col-12">
-            <div className={`card mb-3 ${coloresSubunidades[index % coloresSubunidades.length]}`}>
+            <div className={`card mb-3 ${coloresSubunidades[index % coloresSubunidades.length]} shadow-sm`}>
               <div className="card-body">
-                <h5 className="text-primary">{sub.nombre}</h5>
+                <h5 className={`${coloresTitulos[index % coloresTitulos.length]} mb-3`}>
+                    {sub.nombre}
+                </h5>
 
-                <ul>
+                {/* Información de enriquecimiento por subunidad */}
+                {sub.porqueSeEnseña && (
+                  <div className="mb-3 p-3 bg-light rounded-3">
+                    <small className="text-muted fw-bold d-block mb-1">📚 ¿Por qué se enseña?</small>
+                    <small>{sub.porqueSeEnseña}</small>
+                  </div>
+                )}
+
+                {sub.objetivosAprendizaje?.length > 0 && (
+                  <div className="mb-3">
+                    <small className="text-muted fw-bold d-block mb-1">🎯 Lo que aprenderás:</small>
+                    <ul className="mb-0 ps-3">
+                      {sub.objetivosAprendizaje.map((obj, i) => (
+                        <li key={i}><small>{obj}</small></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {sub.habilidades?.length > 0 && (
+                  <div className="mb-3">
+                    <small className="text-muted fw-bold d-block mb-1">💪 Habilidades que mejorarás:</small>
+                    <ul className="mb-0 ps-3">
+                      {sub.habilidades.map((hab, i) => (
+                        <li key={i}><small>{hab}</small></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Lista de contenidos */}
+                <ul className="mb-4">
                   {sub.contenidos?.map((c, i) => (
-                    <li key={i}>{c}</li>
+                    <li key={i} className="mb-1">{c}</li>
                   ))}
                 </ul>
 
+                {/* Ejercicio Interactivo */}
                 {sub.ejemplo && (
-                  <div className="mt-3 p-3 bg-light rounded border-start border-4 border-danger">
-                    <strong>📝 Ejemplo:</strong>
-                    <p className="mb-1"><em>"{sub.ejemplo.texto}"</em></p>
-                    <p className="mb-2"><strong>Pregunta:</strong> {sub.ejemplo.pregunta}</p>
-                    <div>
-                      <strong>Opciones:</strong>
-                      <ul>
-                        {sub.ejemplo.opciones.map((op, i) => (
-                          <li key={i}>{op}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    {sub.ejemplo.explicacion && (
-                      <div className="mt-2 p-2 bg-white rounded border-start border-3 border-info">
-                        <strong>💡 Explicación:</strong>
-                        <p className="mb-0 mt-1">{sub.ejemplo.explicacion}</p>
-                      </div>
-                    )}
-                  </div>
+                    <EjercicioInteractivo 
+                        ejercicio={{
+                            texto: sub.ejemplo.texto,
+                            pregunta: sub.ejemplo.pregunta,
+                            opciones: sub.ejemplo.opciones,
+                            correcta: sub.ejemplo.correcta,
+                            explicacion: sub.ejemplo.explicacion
+                        }}
+                    />
                 )}
                 
               </div>
@@ -99,7 +140,7 @@ function TemaPage() {
         ))}
       </div>
       
-      <div className="text-center mt-3">
+      <div className="text-center mt-4 mb-5">
         <BackButton />
       </div>
     </div>

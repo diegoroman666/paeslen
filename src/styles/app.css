@@ -279,3 +279,225 @@ h5 {
   box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
 }
 
+/* ==================== EJERCICIO INTERACTIVO ==================== */
+
+.ejercicio-card {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.bg-gradient-ejercicio {
+  background: linear-gradient(135deg, #9775fa 0%, #b197fc 100%);
+}
+
+.ejercicio-texto {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.pregunta-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 16px 20px;
+  border-radius: 16px;
+  border-left: 4px solid #9775fa;
+  font-size: 1.05rem;
+}
+
+.opciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opcion-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: white;
+  border: 2px solid #e9ecef;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.opcion-item:hover {
+  border-color: #9775fa;
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(151, 117, 250, 0.2);
+}
+
+.opcion-item.seleccionada {
+  border-color: #9775fa;
+  background: #f3f0ff;
+}
+
+.opcion-item.correcta {
+  border-color: #51cf66;
+  background: #f0fdf4;
+}
+
+.opcion-item.incorrecta {
+  border-color: #ff6b6b;
+  background: #fff5f5;
+}
+
+.opcion-letra {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9775fa 0%, #b197fc 100%);
+  color: white;
+  font-weight: 700;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.opcion-texto {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.icono-resultado {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* ==================== MODAL ==================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeInOverlay 0.3s ease;
+  padding: 20px;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 24px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.4s ease;
+}
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-correcto {
+  background: linear-gradient(135deg, #51cf66 0%, #69db7c 100%);
+  color: white;
+}
+
+.modal-incorrecto {
+  background: linear-gradient(135deg, #ff922b 0%, #ffa94d 100%);
+  color: white;
+}
+
+.btn-close-modal {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-close-modal:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 24px;
+  text-align: center;
+}
+
+.resultado-icon {
+  font-size: 4rem;
+  animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.respuesta-correcta-box {
+  background: #f0fdf4;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid #51cf66;
+}
+
+.explicacion-box {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.tip-box {
+  color: #9775fa;
+  font-weight: 500;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+/* ==================== RESPONSIVE MODAL ==================== */
+
+@media (max-width: 576px) {
+  .modal-content {
+    max-width: 95%;
+    margin: 10px;
+  }
+  
+  .opcion-item {
+    padding: 12px 14px;
+  }
+  
+  .opcion-letra {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  
+  .resultado-icon {
+    font-size: 3rem;
+  }
+}
+
