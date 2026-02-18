@@ -84,36 +84,6 @@ function TemaPage() {
                     {sub.nombre}
                 </h5>
 
-                {/* Información de enriquecimiento por subunidad */}
-                {sub.porqueSeEnseña && (
-                  <div className="mb-3 p-3 bg-light rounded-3">
-                    <small className="text-muted fw-bold d-block mb-1">📚 ¿Por qué se enseña?</small>
-                    <small>{sub.porqueSeEnseña}</small>
-                  </div>
-                )}
-
-                {sub.objetivosAprendizaje?.length > 0 && (
-                  <div className="mb-3">
-                    <small className="text-muted fw-bold d-block mb-1">🎯 Lo que aprenderás:</small>
-                    <ul className="mb-0 ps-3">
-                      {sub.objetivosAprendizaje.map((obj, i) => (
-                        <li key={i}><small>{obj}</small></li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {sub.habilidades?.length > 0 && (
-                  <div className="mb-3">
-                    <small className="text-muted fw-bold d-block mb-1">💪 Habilidades que mejorarás:</small>
-                    <ul className="mb-0 ps-3">
-                      {sub.habilidades.map((hab, i) => (
-                        <li key={i}><small>{hab}</small></li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
                 {/* Lista de contenidos */}
                 <ul className="mb-4">
                   {sub.contenidos?.map((c, i) => (
