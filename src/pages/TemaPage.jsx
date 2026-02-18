@@ -24,6 +24,42 @@ const coloresTitulos = [
     'subtitulo-cyan'
 ]
 
+// Componente para mostrar un contenido individual con sus definiciones
+function ContenidoItem({ contenido }) {
+    // Verificar si es un objeto con definiciones o solo un string
+    if (typeof contenido === 'object' && contenido.nombre) {
+        return (
+            <div className="mb-4 p-3 bg-light rounded-3">
+                <h6 className="fw-bold text-primary mb-2">{contenido.nombre}</h6>
+                
+                {contenido.definicion && (
+                    <div className="mb-2">
+                        <small className="text-muted fw-bold d-block">Definición:</small>
+                        <small className="ms-2">{contenido.definicion}</small>
+                    </div>
+                )}
+                
+                {contenido.descripcion && (
+                    <div className="mb-2">
+                        <small className="text-muted fw-bold d-block">Descripción:</small>
+                        <small className="ms-2">{contenido.descripcion}</small>
+                    </div>
+                )}
+                
+                {contenido.definicionFormal && (
+                    <div className="mb-2">
+                        <small className="text-muted fw-bold d-block">Definición Formal:</small>
+                        <small className="ms-2 fst-italic">{contenido.definicionFormal}</small>
+                    </div>
+                )}
+            </div>
+        );
+    }
+    
+    // Si es solo un string, mostrar como antes
+    return <li className="mb-1">{contenido}</li>;
+}
+
 function TemaPage() {
   const { ejeId, unidadId, temaId } = useParams()
 
@@ -84,12 +120,12 @@ function TemaPage() {
                     {sub.nombre}
                 </h5>
 
-                {/* Lista de contenidos */}
-                <ul className="mb-4">
-                  {sub.contenidos?.map((c, i) => (
-                    <li key={i} className="mb-1">{c}</li>
-                  ))}
-                </ul>
+                {/* Lista de contenidos con definiciones */}
+                <div className="mb-4">
+                    {sub.contenidos?.map((c, i) => (
+                        <ContenidoItem key={i} contenido={c} />
+                    ))}
+                </div>
 
                 {/* Ejercicio Interactivo */}
                 {sub.ejemplo && (
